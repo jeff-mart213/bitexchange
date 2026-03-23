@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bit Exchange</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+ <header class="navbar">
+  <!-- LOGO + TEXT -->
+  <div class="logo-group">
+    <img src="images/logo.png" alt="logo">
+    <div class="logo-text">
+      <h2>BitExchange</h2>
+      <span>Invest smart, grow your wealth</span>
+    </div>
+  </div>
+
+  <!-- RIGHT: MENU ICON -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- NAV LINKS + BUTTONS -->
+  <nav>
+    <ul>
+      <li>Trading <span class="arrow">▼</span></li>
+      <li>Platforms <span class="arrow">▼</span></li>
+      <li>Tools <span class="arrow">▼</span></li>
+      <li>Account Types <span class="arrow">▼</span></li>
+      <li>Support <span class="arrow">▼</span></li>
+    </ul>
+
+    <!-- Buttons inside nav -->
+    <div class="nav-buttons">
+      <a href="login.html" class="login">Login</a>
+      <a href="create-account.html" class="start">Start Trading</a>
+    </div>
+  </nav>
+</header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Mobile trading app</h1>
+      <p>
+        Looking for a trading app that boasts best-in-class technology 
+        for extreme speed and reliability? Tested to the most rigorous 
+        standards, our mobile app is:
+      </p>
+
+      <ul>
+        <li>✔ Fully customisable</li>
+        <li>✔ Performs equally well on iOS and Android platforms</li>
+        <li>✔ Streamlined for an optimal trading experience</li>
+      </ul>
+
+     <div class="hero-buttons">
+  <img src="images/appstore.png" alt="App Store" class="store-btn">
+  <img src="images/googleplay.png" alt="Google Play" class="store-btn">
+</div>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/hero.png" alt="hero">
+    </div>
+
+</div>
+  </section>
+
+
+  
+  <!-- 🔥 LIVE SECTION -->
+<section class="live-section">
+
+  <!-- LEFT SIDE -->
+  <div class="chart-side">
+
+    <!-- COIN SWITCH (KEEP THIS) -->
+    <div class="crypto-bar">
+      <div class="coin active" onclick="changeSymbol('BTCUSD', this)">
+        BTC <span id="btcPrice">$...</span>
+      </div>
+      <div class="coin" onclick="changeSymbol('ETHUSD', this)">
+        ETH <span id="ethPrice">$...</span>
+      </div>
+      <div class="coin" onclick="changeSymbol('SOLUSD', this)">
+        SOL <span id="solPrice">$...</span>
+      </div>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-box">
+      <div id="tradingview_chart"></div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="chart-image">
+    <img src="images/happyimage.jpeg" alt="Happy user">
+  </div>
+
+</section>
+
+
+  
+  <!-- CHART -->
+  <div class="btc-widget">
+    <div id="tradingview_chart"></div>
+  </div>
+
+  <!-- CHAT BUTTON -->
+<div class="chat-toggle" onclick="toggleChat()">
+  💬
+</div>
+
+<!-- FULLSCREEN CHAT -->
+<div class="chat-overlay" id="chatOverlay">
+  
+  <div class="chat-container">
+
+    <!-- HEADER -->
+    <div class="chat-header">
+      <h3>Customer Support</h3>
+      <button onclick="toggleChat()">✖</button>
+    </div>
+
+    <!-- BODY -->
+    <div class="chat-body" id="chatBody">
+      <p class="bot">Hello 👋 Welcome! How can we help you today?</p>
+    </div>
+
+    <!-- INPUT -->
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ✅ TradingView Script (ONLY ONCE) -->
+<script src="https://s3.tradingview.com/tv.js"></script>
+
+<script>
+let widget;
+
+// LOAD CHART
+function loadChart(symbol = "BTCUSD") {
+  const container = document.getElementById("tradingview_chart");
+  if (!container) return;
+
+  container.innerHTML = ""; // clear old chart
+
+  widget = new TradingView.widget({
+    width: "100%",
+    height: 500,
+    symbol: symbol,
+    interval: "D",
+    timezone: "Etc/UTC",
+    theme: "dark",
+    style: "1",
+    locale: "en",
+    toolbar_bg: "#0f1b2a",
+    enable_publishing: false,
+    hide_side_toolbar: false,
+    allow_symbol_change: false,
+    container_id: "tradingview_chart"
+  });
+}
+
+// SWITCH COINS
+function changeSymbol(symbol, el) {
+  document.querySelectorAll(".coin").forEach(c => c.classList.remove("active"));
+  el.classList.add("active");
+  loadChart(symbol);
+}
+
+// LOAD DEFAULT CHART
+document.addEventListener("DOMContentLoaded", function () {
+  loadChart();
+});
+
+
+// =======================
+// 🔥 LIVE PRICES
+// =======================
+async function getPrices() {
+  try {
+    const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd");
+    const data = await res.json();
+
+    const btc = document.getElementById("btcPrice");
+    const eth = document.getElementById("ethPrice");
+    const sol = document.getElementById("solPrice");
+
+    if (btc) btc.innerText = "$" + data.bitcoin.usd;
+    if (eth) eth.innerText = "$" + data.ethereum.usd;
+    if (sol) sol.innerText = "$" + data.solana.usd;
+
+  } catch (err) {
+    console.log("Price error:", err);
+  }
+}
+
+// RUN PRICE FETCH
+getPrices();
+setInterval(getPrices, 10000);
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

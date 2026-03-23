@@ -1,0 +1,1621 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Mulish', sans-serif;
+
+}
+
+body {
+  background: #0f1b2a;
+  color: white;
+  font-family: 'Mulish', sans-serif;
+
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  background: white;
+  color: black;
+}
+
+/* LOGO GROUP */
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-group img {
+  width: 70px;
+}
+
+.logo-text h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo-text span {
+  font-size: 10px;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+/* NAV LINKS */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-left: -80px; /* brings menu closer to logo */
+}
+
+nav ul li {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow {
+  font-size: 10px;
+}
+
+/* BUTTONS */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login {
+  background: transparent;
+  border: 1px solid black;
+  padding: 14px 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.start {
+  background: #6cc04a;
+  border: none;
+  padding: 14px 24px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-text ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.hero-text li {
+  margin-bottom: 10px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.store-btn {
+  width: 160px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.store-btn:hover {
+  transform: scale(1.05);
+}
+
+.hero-image img {
+  width: 700px;
+}
+
+/* CHAT BUTTON */
+.chat-toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #6cc04a;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* FULLSCREEN OVERLAY */
+.chat-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f1b2a;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* CHAT CONTAINER */
+.chat-container {
+  width: 100%;
+  max-width: 700px;
+  height: 90vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* HEADER */
+.chat-header {
+  background: #6cc04a;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* BODY */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+.chat-body p {
+  margin-bottom: 10px;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* USER */
+.user {
+  background: #6cc04a;
+  color: white;
+  margin-left: auto;
+}
+
+/* BOT */
+.bot {
+  background: #ddd;
+  color: black;
+}
+
+/* FOOTER */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  outline: none;
+}
+
+.chat-footer button {
+  background: #6cc04a;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-image img {
+    width: 400px;
+  }
+}
+
+/* MOBILE */
+/* ========================= */
+/* MOBILE NAVBAR FIX */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  /* LOGO GROUP (LEFT) */
+  .logo-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1; /* pushes menu icon to the far right */
+  }
+
+  .logo-group img {
+    width: 45px;
+  }
+
+  .logo-text h2 {
+    font-size: 18px;
+  }
+
+  .logo-text span {
+    font-size: 9px;
+  }
+
+  /* MENU ICON (RIGHT) */
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* NAV DROPDOWN */
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  /* ========================= */
+  /* HERO */
+  /* ========================= */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+ .hero-text {
+  max-width: 90%;
+  margin: auto;
+}
+
+  .hero-image img {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .store-btn {
+    width: 140px;
+  }
+
+  /* ========================= */
+  /* CHAT FULLSCREEN */
+  /* ========================= */
+
+  .chat-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .chat-body {
+    font-size: 13px;
+  }
+}
+
+
+/* ========================= */
+/* SMALL PHONES */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .store-btn {
+    width: 120px;
+  }
+
+}
+
+
+
+/* ========================= */
+/* AUTH PAGE */
+/* ========================= */
+.auth-body {
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Mulish', sans-serif;
+  padding: 20px;
+}
+
+.auth-container {
+  background: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* HEADER */
+.auth-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.auth-header img {
+  width: 70px;
+  margin-bottom: 5px;
+}
+
+.auth-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.auth-header p {
+  font-size: 18px;
+  color: rgb(56, 55, 55);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* INVITE TEXT */
+.invite-text {
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+
+
+/* BUTTON */
+.auth-container button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: orange;
+  color: white;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* LOGIN LINK */
+.auth-link {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 25px;
+  }
+
+  .auth-header img {
+    width: 60px;
+  }
+
+  .auth-header h2 {
+    font-size: 18px;
+  }
+
+  .auth-header p {
+    font-size: 12px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 20px;
+  }
+
+  .auth-container input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .auth-container button {
+    padding: 12px;
+  }
+
+  .terms {
+    font-size: 11px;
+  }
+}
+
+
+/* ========================= */
+/* DASHBOARD */
+/* ========================= */
+
+.dashboard-body {
+  font-family: 'Mulish', sans-serif;
+  background: #f5f7fa;
+}
+
+/* HEADER */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.dashboard-header button {
+  padding: 8px 15px;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.dashboard-container {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* BALANCE */
+.balance-card {
+  background: #6cc04a;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.balance-card h1 {
+  font-size: 40px;
+}
+
+/* ACTIONS */
+.actions {
+  background: white;
+  color: black; /* 👈 ADD THIS */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#history li,
+#pendingDeposits li {
+  color: black;
+}
+
+.deposit-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.deposit-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #6cc04a;
+  color: white;
+  cursor: pointer;
+}
+
+.actions input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.actions button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 15px 20px;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .deposit-buttons {
+    flex-direction: column;
+  }
+
+  .balance-card h1 {
+    font-size: 30px;
+  }
+}
+
+
+
+#history {
+  list-style: none;
+  padding: 0;
+}
+
+#history li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+
+
+.dashboard-body {
+  background: linear-gradient(135deg, #0f1b2a, #1c2e4a);
+  color: white;
+}
+
+/* LAYOUT */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* BALANCE CARD */
+.balance-card h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.sub-text {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.status {
+  color: #6cc04a;
+  font-size: 14px;
+}
+
+.unverified {
+  color: red;
+  font-size: 13px;
+}
+
+.last-update {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2a3f5f;
+  color: white;
+  cursor: pointer;
+}
+
+/* GRID RIGHT */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.stats-grid h2 {
+  margin: 10px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.deposit-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.deposit-form select,
+.deposit-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  outline: none;
+}
+
+.deposit-form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #2a8cff, #4facfe);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.deposit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.deposit-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.method {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.method:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.method.active {
+  background: #2a8cff;
+}
+
+@media (max-width: 768px) {
+
+  .deposit-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .deposit-container {
+    padding-top: 40px;
+  }
+
+}
+
+
+/* ============================= */
+/* DEPOSIT DETAILS (DASHBOARD STYLE) */
+/* ============================= */
+
+.deposit-details-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TITLE */
+.deposit-details-container h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* AMOUNT CARD */
+.center-card {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+}
+
+.center-card h1 {
+  font-size: 32px;
+}
+
+/* STEPS */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.steps div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  font-size: 13px;
+}
+
+/* GRID */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* CARD */
+.details-grid .card {
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* QR IMAGE */
+.details-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* WALLET */
+.wallet-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.wallet-box span {
+  flex: 1;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.wallet-box button {
+  padding: 6px 10px;
+  background: #2a8cff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+}
+
+/* FILE INPUT */
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+
+/* ============================= */
+/* 📱 MOBILE FIX (MAIN ISSUE) */
+/* ============================= */
+@media (max-width: 768px) {
+
+  .deposit-details-container {
+    padding: 15px;
+  }
+
+  /* FULL WIDTH LIKE DASHBOARD */
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* STACK STEPS */
+  .steps {
+    flex-direction: column;
+  }
+
+  .steps div {
+    width: 100%;
+  }
+
+  /* WALLET STACK */
+  .wallet-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wallet-box button {
+    width: 100%;
+  }
+
+  /* FIX QR SIZE */
+  .details-grid img {
+    max-height: 250px;
+    object-fit: contain;
+  }
+
+  /* BIGGER TAP TARGET */
+  .submit-btn {
+    padding: 16px;
+    font-size: 14px;
+  }
+}
+
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+  .center-card h1 {
+    font-size: 26px;
+  }
+
+  .deposit-details-container h2 {
+    font-size: 20px;
+  }
+
+  .steps div {
+    font-size: 12px;
+  }
+}
+
+
+
+/* WITHDRAW MODAL */
+.withdraw-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.withdraw-box {
+  width: 90%;
+  max-width: 500px;
+  background: #0f1b2a;
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+}
+
+.withdraw-box h2 {
+  margin-bottom: 10px;
+}
+
+.warning {
+  background: rgba(255,165,0,0.1);
+  padding: 10px;
+  border-left: 4px solid orange;
+  margin: 15px 0;
+}
+
+.withdraw-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+.withdraw-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  background: #2a8cff;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: red;
+}
+
+.btc-widget {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.tradingview-widget-container {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* LIVE CRYPTO SECTION */
+.crypto-live {
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* COIN SWITCH BAR */
+.crypto-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.coin {
+  background: #1c2e4a;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.coin:hover {
+  background: #2a8cff;
+}
+
+.coin.active {
+  background: #6cc04a;
+}
+
+/* CHART */
+.btc-widget {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+/* MAIN LAYOUT */
+.live-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.chart-side {
+  flex: 1;
+}
+
+/* COIN BAR */
+.crypto-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.coin {
+  background: #1c2e4a;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.coin.active {
+  background: #6cc04a;
+}
+
+/* CHART */
+.chart-box {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* RIGHT IMAGE */
+.chart-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-image img {
+  width: 100%;
+  max-width: 750px;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .live-section {
+    flex-direction: column;
+    text-align: center;
+    width: 320px;
+    height: 500px;
+  }
+
+  .chart-image img {
+    width: 290px;
+    height: 180px;
+    margin-top: 20px;
+  }
+}
+
+/* MOBILE NAVBAR FIX - FULL RESPONSIVE */
+@media (max-width: 768px) {
+
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: none; /* hide by default */
+    flex-direction: column;
+    padding: 20px;
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+
+  nav.active {
+    display: flex; /* show when menu toggled */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .nav-buttons a {
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 6px;
+  }
+
+  .login {
+    border: 1px solid black;
+    color: black;
+    background: transparent;
+  }
+
+  .start {
+    background: #6cc04a;
+    color: white;
+    border: none;
+  }
+
+}
+
+/* Desktop nav-buttons inside nav */
+.navbar nav .nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px; /* spacing after menu items */
+}
+
+/* Desktop buttons styling (already defined) */
+.navbar nav .nav-buttons .login {
+  background: transparent;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navbar nav .nav-buttons .start {
+  background: #6cc04a;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE NAVBAR */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    font-weight: 600;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .nav-buttons a {
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 6px;
+  }
+}
+/* Desktop navbar layout */
+.navbar nav {
+  display: flex;           
+  align-items: center;
+  gap: 30px;               
+}
+
+/* Keep the nav links inline */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Buttons styling */
+.navbar nav .nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+body.deposit-body {
+  background: linear-gradient(135deg, #0f1b2a, #1c2e4a);
+  color: white;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.deposit-header {
+  text-align: center;
+  padding: 20px;
+  background: #1c2e4a;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.deposit-header h2 {
+  font-size: 24px;
+}
+
+/* MAIN CONTAINER */
+.deposit-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+.deposit-form h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.deposit-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.deposit-form select,
+.deposit-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 14px;
+}
+
+.deposit-form button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2a8cff, #4facfe);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.deposit-info .card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.method {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.method:hover,
+.method.active {
+  background: #2a8cff;
+}
+
+/* ==================== RESPONSIVE MOBILE ==================== */
+@media (max-width: 768px) {
+
+  .deposit-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .deposit-form,
+  .deposit-info .card {
+    width: 100%;
+  }
+
+  .deposit-form h2 {
+    font-size: 20px;
+  }
+
+  .deposit-form select,
+  .deposit-form input,
+  .deposit-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .deposit-info .card h3 {
+    font-size: 16px;
+  }
+
+  .method {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deposit-header h2 {
+    font-size: 18px;
+  }
+
+  .deposit-form h2 {
+    font-size: 18px;
+  }
+
+  .deposit-form select,
+  .deposit-form input,
+  .deposit-form button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .deposit-info .card h3 {
+    font-size: 14px;
+  }
+
+  .method {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+
+/* ============================= */
+/* 🔥 PERFECT RESPONSIVE FIX */
+/* ============================= */
+
+/* CONTAINER LIKE DEPOSIT PAGE */
+.deposit-details-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* GRID FIX */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CARDS FULL WIDTH */
+.details-grid .card {
+  width: 100%;
+}
+
+/* IMAGE SAFE */
+.details-grid img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .deposit-details-container {
+    padding: 15px;
+  }
+
+  /* 🔥 STACK LIKE DEPOSIT PAGE */
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* 🔥 STEPS STACK */
+  .steps {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .steps div {
+    width: 100%;
+  }
+
+  /* 🔥 CARD FULL WIDTH */
+  .card {
+    width: 100%;
+  }
+
+  /* 🔥 WALLET FIX */
+  .wallet-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .wallet-box span {
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  .wallet-box button {
+    width: 100%;
+  }
+
+  /* 🔥 BUTTON */
+  .submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  /* 🔥 TEXT CENTERING */
+  .deposit-details-container h2,
+  .subtitle {
+    text-align: center;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+  .center-card h1 {
+    font-size: 24px;
+  }
+
+  .deposit-details-container h2 {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .steps div {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .steps {
+    flex-direction: column !important;
+  }
+}
+
+
+
+
+

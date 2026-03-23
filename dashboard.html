@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- HEADER -->
+  <header class="dashboard-header">
+    <h2>Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <!-- MAIN -->
+ <div class="dashboard-container">
+
+  <!-- BALANCE CARD -->
+  <div class="card balance-card">
+    <h3>Account Balance</h3>
+    <p class="sub-text">Your available funds</p>
+
+    <h1 id="balance">$0.00</h1>
+
+    <p class="status">● Available for Withdrawal</p>
+    <p class="unverified">● Unverified</p>
+
+    <p class="last-update">Last updated: <span id="lastUpdate"></span></p>
+
+    <div class="card-buttons">
+      <button onclick="goToDeposit()">Deposit</button>
+      <button onclick="withdraw()">Withdraw</button>
+    </div>
+  </div>
+
+  <!-- RIGHT GRID -->
+  <div class="stats-grid">
+
+    <div class="card">
+      <h4>Total Profit</h4>
+      <h2 id="profit">$0.00</h2>
+      <p>Last period</p>
+    </div>
+
+    <div class="card">
+      <h4>Total Deposit</h4>
+      <h2 id="totalDeposit">$0.00</h2>
+      <p>All time</p>
+    </div>
+
+    <div class="card">
+      <h4>Total Withdrawal</h4>
+      <h2 id="totalWithdraw">$0.00</h2>
+      <p>All time</p>
+    </div>
+
+    <div class="card">
+      <h4>Bonus</h4>
+      <h2 id="bonus">$0.00</h2>
+      <p>All time</p>
+    </div>
+
+  </div>
+
+  <!-- TRANSACTION HISTORY -->
+<div class="actions">
+  <h3>Transaction History</h3>
+  <ul id="history"></ul>
+</div>
+
+<!-- PENDING DEPOSITS -->
+<div class="actions">
+  <h3>Pending Deposits</h3>
+  <ul id="pendingDeposits"></ul>
+</div>
+
+</div>
+
+
+<!-- WITHDRAW VERIFICATION MODAL -->
+<div id="withdrawModal" class="withdraw-modal" style="display:none;">
+  <div class="withdraw-box">
+
+    <h2>Security Verification Required</h2>
+    <p class="sub-text">Additional verification needed to process your withdrawal</p>
+
+    <div class="warning">
+      <h4>Withdrawal Code Required</h4>
+      <p>
+        For your security, this withdrawal requires a verification code.
+        Please contact support to obtain your withdrawal code.
+      </p>
+    </div>
+
+    <label>Enter Withdrawal Code</label>
+    <input type="text" id="withdrawCode" placeholder="Enter code here">
+
+    <button onclick="verifyWithdraw()">Verify & Continue</button>
+    <button class="close-btn" onclick="closeWithdraw()">Cancel</button>
+
+  </div>
+</div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

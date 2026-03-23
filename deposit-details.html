@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Deposit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+<div class="deposit-details-container">
+
+  <h2>Complete Your Deposit</h2>
+  <p class="subtitle">Securely deposit funds using crypto</p>
+
+  <!-- AMOUNT -->
+  <div class="card center-card">
+    <p>Amount to Deposit</p>
+    <h1 id="depositAmountDisplay">$0</h1>
+    <span class="warning">Send exact amount to avoid delays</span>
+  </div>
+
+  <!-- STEPS -->
+  <div class="card steps">
+    <div>1. Send Payment</div>
+    <div>2. Upload Proof</div>
+    <div>3. Submit & Wait</div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="details-grid">
+
+    <!-- LEFT (QR) -->
+    <div class="card">
+      <h3>QR Code Payment</h3>
+      <img id="qrImage" src="images/scan.jpeg" alt="QR Code">
+      <p>Scan with your wallet app to send payment instantly</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="card">
+
+      <h3>Wallet Address</h3>
+      <div class="wallet-box">
+        <span id="walletAddress">13xi5ic9aXZZM2D24LUD7PkRb5MvifbXhp</span>
+        <button onclick="copyAddress()">Copy</button>
+      </div>
+
+      <h3>Upload Payment Proof</h3>
+      <input type="file" id="proofFile">
+
+    </div>
+
+  </div>
+
+  <button class="submit-btn" onclick="submitProof()">Submit Payment Proof</button>
+
+</div>
+
+
+
+
+<script src="js/script.js"></script>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("pendingDeposit"));
+
+  console.log("Deposit Data:", data);
+
+  if (data && data.amount) {
+    document.getElementById("depositAmountDisplay").innerText = "$" + data.amount;
+  }
+</script>
+</body>
+</html>
