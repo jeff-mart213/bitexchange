@@ -278,6 +278,8 @@ nav ul li {
   }
 }
 
+
+
 /* MOBILE */
 /* ========================= */
 /* MOBILE NAVBAR FIX */
@@ -288,8 +290,27 @@ nav ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 15px 20px; 
   }
+  @media (max-width: 768px) {
+
+  nav {
+    display: none !important; /* 🔥 FORCE HIDE */
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex !important; /* 🔥 ONLY SHOW WHEN CLICKED */
+  }
+
+}
 
   /* LOGO GROUP (LEFT) */
   .logo-group {
@@ -345,12 +366,13 @@ nav ul li {
   /* HERO */
   /* ========================= */
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔥 center everything */
+  text-align: center;
+  padding: 40px 20px;
+}
 
   .hero-text {
     max-width: 100%;
@@ -361,10 +383,13 @@ nav ul li {
   margin: auto;
 }
 
-  .hero-image img {
-    width: 100%;
-    margin-top: 30px;
-  }
+.hero-image img {
+  width: 100%;        /* 🔥 bigger */
+  max-width: 780px;  /* 🔥 clean limit */
+  margin-top: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
 
   .store-btn {
     width: 140px;
@@ -1165,19 +1190,62 @@ input[type="file"] {
 }
 
 @media (max-width: 768px) {
+
   .live-section {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    gap: 20px;
+    width: 100%;
+    height: auto; /* 🔥 REMOVE FIXED HEIGHT */
+  }
+
+  .chart-side {
+    width: 100%;
+    max-width: 100%;
     text-align: center;
-    width: 320px;
-    height: 500px;
+  }
+
+  .chart-box {
+    width: 100%;
+  }
+
+  #tradingview_chart {
+    width: 100% !important;
+    height: 300px !important; /* 🔥 PERFECT MOBILE HEIGHT */
+  }
+
+  .chart-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .chart-image img {
-    width: 290px;
-    height: 180px;
-    margin-top: 20px;
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 15px;
   }
+
 }
+
+@media (max-width: 768px) {
+
+  .crypto-bar {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .coin {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+}
+
+
 
 /* MOBILE NAVBAR FIX - FULL RESPONSIVE */
 @media (max-width: 768px) {
