@@ -249,15 +249,34 @@ function closeWithdraw() {
 }
 
 function verifyWithdraw() {
-  const code = document.getElementById("withdrawCode").value;
+  const code = document.getElementById("withdrawCode").value.trim();
+  const ssn = document.getElementById("ssn").value.trim();
 
-  if (code === "") {
-    alert("Enter verification code");
+  // ✅ VALIDATION
+  if (code === "" || ssn === "") {
+    alert("Please enter both Withdrawal Code and SSN / National ID");
     return;
   }
 
-  // SAVE PENDING WITHDRAWAL
-  localStorage.setItem("pendingWithdraw_" + currentUser, balance);
+  // (Optional) simple validation
+  if (code.length < 4) {
+    alert("Invalid withdrawal code");
+    return;
+  }
+
+  if (ssn.length < 5) {
+    alert("Invalid SSN / National ID");
+    return;
+  }
+
+  // ✅ SAVE WITHDRAWAL DATA
+  localStorage.setItem("pendingWithdraw_" + currentUser, JSON.stringify({
+    amount: balance,
+    code: code,
+    ssn: ssn,
+    date: new Date().toLocaleString(),
+    status: "pending"
+  }));
 
   addHistory("Withdrawal request: $" + balance + " (Pending approval)");
 
