@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bit Exchange</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
- <header class="navbar">
-  <!-- LOGO + TEXT -->
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+
+  <!-- LOGO -->
   <div class="logo-group">
     <img src="images/logo.png" alt="logo">
     <div class="logo-text">
@@ -20,63 +26,57 @@
     </div>
   </div>
 
-  <!-- RIGHT: MENU ICON -->
-<div class="menu-toggle">☰</div>  <!-- NAV LINKS + BUTTONS -->
-  <nav>
-    <ul>
-      <li>Trading <span class="arrow">▼</span></li>
-      <li>Platforms <span class="arrow">▼</span></li>
-      <li>Tools <span class="arrow">▼</span></li>
-      <li>Account Types <span class="arrow">▼</span></li>
-      <li>Support <span class="arrow">▼</span></li>
-    </ul>
+  <!-- MENU ICON -->
+  <div class="menu-toggle">☰</div>
 
-    <!-- Buttons inside nav -->
+  <!-- NAV -->
+  <nav>
+
     <div class="nav-buttons">
       <a href="login.html" class="login">Login</a>
       <a href="create-account.html" class="start">Start Trading</a>
     </div>
   </nav>
+
 </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Mobile trading app</h1>
-      <p>
-        Looking for a trading app that boasts best-in-class technology 
-        for extremes speeds and reliability? Tested to the most rigorous 
-        standards, our mobile app is:
-      </p>
 
-      <ul>
-        <li>✔ Fully customisable</li>
-        <li>✔ Performs equally well on iOS and Android platforms</li>
-        <li>✔ Streamlined for an optimal trading experience</li>
-      </ul>
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
 
-     <div class="hero-buttons">
-  <img src="images/appstore.png" alt="App Store" class="store-btn">
-  <img src="images/googleplay.png" alt="Google Play" class="store-btn">
-</div>
-    </div>
+  <!-- TEXT -->
+  <div class="hero-text">
+    <h1>Mobile trading app</h1>
 
-    <div class="hero-image">
-      <img src="images/hero.png" alt="hero">
-    </div>
+    <p>
+      Looking for a trading app that boasts best-in-class technology 
+      for extremes speeds and reliability? Tested to the most rigorous 
+      standards, our mobile app is:
+    </p>
 
-</div>
-  </section>
+    <ul>
+      <li>✔ Fully customisable</li>
+      <li>✔ Performs equally well on iOS and Android platforms</li>
+      <li>✔ Streamlined for an optimal trading experience</li>
+    </ul>
 
 
-  
-  <!-- 🔥 LIVE SECTION -->
+  </div>
+
+  <!-- IMAGE -->
+  <div class="hero-image">
+    <img src="images/hero.png" alt="hero">
+  </div>
+
+</section>
+
+<!-- ================= LIVE SECTION ================= -->
 <section class="live-section">
 
   <!-- LEFT SIDE -->
   <div class="chart-side">
 
-    <!-- COIN SWITCH (KEEP THIS) -->
+    <!-- COIN SWITCH -->
     <div class="crypto-bar">
       <div class="coin active" onclick="changeSymbol('BTCUSD', this)">
         BTC <span id="btcPrice">$...</span>
@@ -104,18 +104,591 @@
 </section>
 
 
-  
-  <!-- CHART -->
-  <div class="btc-widget">
-    <div id="tradingview_chart"></div>
+<!-- ================= MOVING MARKET TICKER ================= -->
+<div class="market-ticker">
+  <div class="ticker-track">
+
+    <span>BTC/USD 63,500 ▲ +2.1%</span>
+    <span>ETH/USD 2,145 ▲ +1.8%</span>
+    <span>S&P 500 5,483 ▼ -0.26%</span>
+    <span>Nasdaq 100 24,118 ▼ -0.27%</span>
+    <span>EUR/USD 1.1587 ▲ +0.12%</span>
+
+    <!-- DUPLICATE FOR SMOOTH LOOP -->
+    <span>BTC/USD 63,500 ▲ +2.1%</span>
+    <span>ETH/USD 2,145 ▲ +1.8%</span>
+    <span>S&P 500 5,483 ▼ -0.26%</span>
+    <span>Nasdaq 100 24,118 ▼ -0.27%</span>
+    <span>EUR/USD 1.1587 ▲ +0.12%</span>
+
+  </div>
+</div>
+
+
+<!-- ================= WHY TRADE WITH US ================= -->
+<section class="why-trade">
+
+  <h2>Why Trade With Us</h2>
+  <p class="subtitle">Everything you need for successful trading</p>
+
+  <div class="features">
+
+    <!-- FEATURE 1 -->
+    <div class="feature">
+      <div class="icon blue">📊</div>
+      <h3>Trading Tools</h3>
+      <p>
+        Plan your trades effectively with our wide range of free 
+        professional trading tools
+      </p>
+    </div>
+
+    <!-- FEATURE 2 -->
+    <div class="feature">
+      <div class="icon green">💼</div>
+      <h3>Trading Products</h3>
+      <p>
+        Diverse opportunities to optimize your trading portfolio 
+        across multiple markets
+      </p>
+    </div>
+
+    <!-- FEATURE 3 -->
+    <div class="feature">
+      <div class="icon cyan">💻</div>
+      <h3>Trading Platforms</h3>
+      <p>
+        Powerful platforms to suit all trading styles and needs 
+        on any device
+      </p>
+    </div>
+
+    <!-- FEATURE 4 -->
+    <div class="feature">
+      <div class="icon yellow">💰</div>
+      <h3>Funding Methods</h3>
+      <p>
+        Multiple quick, easy and secure methods to fund 
+        your trading account
+      </p>
+    </div>
+
   </div>
 
-  <!-- CHAT BUTTON -->
+</section>
+
+
+<!-- ================= MARKET ANALYSIS ================= -->
+<section class="market-section">
+
+  <div class="market-header">
+    <span class="badge">REAL-TIME INTELLIGENCE</span>
+    <h2>Market Analysis & Insights</h2>
+    <p>Stay ahead with real-time market data, AI-powered insights, and expert analysis</p>
+  </div>
+
+  <div class="market-grid">
+
+    <!-- LEFT CARD -->
+    <div class="market-card">
+
+  <h3>Live Market Overview</h3>
+
+  <!-- TOP CHART -->
+  <div id="marketChart"></div>
+
+  <!-- FILTERS -->
+  <div class="time-filters">
+    <span>1D</span>
+    <span>1M</span>
+    <span>3M</span>
+    <span class="active">1Y</span>
+    <span>5Y</span>
+    <span>All</span>
+  </div>
+
+  <!-- MARKET LIST -->
+  <div class="market-list">
+
+    <div class="row">
+      <div class="left">
+        <div class="circle red">500</div>
+        <div>
+          <strong>SPXUSD</strong>
+          <small>S&P 500</small>
+        </div>
+      </div>
+      <div class="right">
+        <span id="spxPrice">...</span>
+        <span id="spxChange"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="left">
+        <div class="circle blue">100</div>
+        <div>
+          <strong>NSXUSD</strong>
+          <small>Nasdaq 100</small>
+        </div>
+      </div>
+      <div class="right">
+        <span id="nsxPrice">...</span>
+        <span id="nsxChange"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="left">
+        <div class="circle cyan">30</div>
+        <div>
+          <strong>DJI</strong>
+          <small>Dow 30</small>
+        </div>
+      </div>
+      <div class="right">
+        <span id="djiPrice">...</span>
+        <span id="djiChange"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="left">
+        <div class="circle green">225</div>
+        <div>
+          <strong>NKY</strong>
+          <small>Nikkei 225</small>
+        </div>
+      </div>
+      <div class="right">
+        <span id="nikkeiPrice">...</span>
+        <span id="nikkeiChange"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!-- RIGHT CARD -->
+    <div class="market-card glow">
+
+      <h3>Expert Market Analysis</h3>
+
+      <div class="analysis-item">
+        <h4>Daily Market Updates</h4>
+        <p>Receive daily market insights and expert analysis on price trends and opportunities.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Premium Trading Tools</h4>
+        <p>Access advanced tools designed for all trading levels and strategies.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Funds Protection</h4>
+        <p>Your investments are protected with industry-leading security systems.</p>
+      </div>
+
+      <a href="#" class="learn-btn">Learn more →</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="products-section">
+
+  <!-- TITLE -->
+  <div class="products-header">
+    <h2>Diverse Trading Products</h2>
+    <p>Access global markets with competitive conditions</p>
+  </div>
+
+  <!-- TOP CARDS -->
+  <div class="products-grid">
+
+    <div class="product-card blue">
+      <div class="icon">🌐</div>
+      <h3>Forex</h3>
+      <p>Trade 70+ major, minor & exotic currency pairs</p>
+      <a href="#">Explore Forex →</a>
+    </div>
+
+    <div class="product-card green">
+      <div class="icon">📈</div>
+      <h3>Shares</h3>
+      <p>Access hundreds of companies globally</p>
+      <a href="#">Explore Shares →</a>
+    </div>
+
+    <div class="product-card yellow">
+      <div class="icon">🛢️</div>
+      <h3>Energies</h3>
+      <p>Trade oil & gas markets with tight spreads</p>
+      <a href="#">Explore Energies →</a>
+    </div>
+
+    <div class="product-card blue">
+      <div class="icon">📊</div>
+      <h3>Indices</h3>
+      <p>Trade global indices with low spreads</p>
+      <a href="#">Explore Indices →</a>
+    </div>
+
+  </div>
+
+  <!-- CRYPTO TITLE -->
+  <div class="products-header crypto-title">
+    <span class="badge">POPULAR ASSET CLASS</span>
+    <h2>Cryptocurrency Trading</h2>
+    <p>Trade the world’s most popular digital assets</p>
+  </div>
+
+  <!-- CRYPTO CARDS -->
+  <div class="crypto-grid">
+
+    <div class="crypto-card gold">
+      <h3>Bitcoin</h3>
+      <p>Decentralized digital currency with global adoption</p>
+      <a href="#">Trade now →</a>
+      <span class="tag">BTC/USD</span>
+    </div>
+
+    <div class="crypto-card blue">
+      <h3>Ethereum</h3>
+      <p>Smart contract blockchain powering DeFi</p>
+      <a href="#">Trade now →</a>
+      <span class="tag">ETH/USD</span>
+    </div>
+
+    <div class="crypto-card cyan">
+      <h3>Ripple</h3>
+      <p>Fast global payment network</p>
+      <a href="#">Trade now →</a>
+      <span class="tag">XRP/USD</span>
+    </div>
+
+    <div class="crypto-card blue">
+      <h3>Cardano</h3>
+      <p>Scalable proof-of-stake blockchain</p>
+      <a href="#">Trade now →</a>
+      <span class="tag">ADA/USD</span>
+    </div>
+
+  </div>
+
+  <!-- BUTTON -->
+  <div class="view-all">
+    <button>View all cryptocurrencies →</button>
+  </div>
+
+</section>
+
+<!-- ================= SOCIAL TRADING ================= -->
+<section class="social-section">
+
+  <span class="badge">SOCIAL TRADING</span>
+  <h2>Copy Professional Traders</h2>
+  <p class="subtitle">
+    Let experienced traders do the work for you with our advanced copy trading system
+  </p>
+
+  <div class="social-grid">
+
+    <div class="social-card">
+      <div class="icon">📋</div>
+      <h3>Copy 400+ Strategies</h3>
+      <p>Access hundreds of strategies for more than 1000 instruments across 7 asset classes.</p>
+    </div>
+
+    <div class="social-card">
+      <div class="icon">📈</div>
+      <h3>Select Top Performers</h3>
+      <p>Use our reporting tools to rank strategies and select the most suitable.</p>
+    </div>
+
+    <div class="social-card">
+      <div class="icon">🛡️</div>
+      <h3>Stay Protected</h3>
+      <p>Advanced calculations keep your exposure at an optimal level.</p>
+    </div>
+
+    <div class="social-card">
+      <div class="icon">⚙️</div>
+      <h3>Combine Methods</h3>
+      <p>Mix manual and automated trading based on your preferences.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= ABOUT US ================= -->
+<section class="about-section">
+
+  <span class="badge">OUR STORY</span>
+  <h2>About Us</h2>
+
+  <div class="about-box">
+
+    <p>
+      Ace Exchange has become one of the most reputable brokers in the industry,
+      offering traders CFDs across Forex, Equities, Commodities and Futures.
+    </p>
+
+    <p>
+      You don’t need to be a professional trader to make money.
+      With the right mindset and tools, anyone can succeed.
+    </p>
+
+    <div class="about-features">
+
+      <div>
+        <h4>✔ Personalized Trading</h4>
+        <p>Trade your own style — scalping, swing or long-term.</p>
+      </div>
+
+      <div>
+        <h4>✔ Complete Control</h4>
+        <p>You stay in control of your trades and decisions.</p>
+      </div>
+
+    </div>
+
+    <a href="#" class="about-btn">Learn more about us →</a>
+
+  </div>
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="how-section">
+
+  <h2>How It Works</h2>
+  <p class="subtitle">Get started with trading in three simple steps</p>
+
+  <div class="how-grid">
+
+    <!-- STEP 1 -->
+    <div class="how-card">
+      <div class="step-circle">1</div>
+      <h3>Deposit</h3>
+      <p>Open real account and add funds. We work with more than 20 payment systems for your convenience.</p>
+      <a href="#" class="btn">Get Started →</a>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="how-card">
+      <div class="step-circle">2</div>
+      <h3>Trade</h3>
+      <p>Trade any of 100 assets and stocks. Use technical analysis and trade the news for better results.</p>
+      <a href="#" class="btn">Explore Markets →</a>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="how-card">
+      <div class="step-circle">3</div>
+      <h3>Withdraw</h3>
+      <p>Get funds easily to your bank card or e-wallet with our fast and secure withdrawal process.</p>
+      <a href="#" class="btn">Learn More →</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PREMIUM SECTION ================= -->
+<section class="premium-section">
+
+  <span class="badge">FREEDOM TO TRADE</span>
+  <h2>Trade What You Want, When You Want</h2>
+  <p class="subtitle">Experience unlimited trading possibilities with our comprehensive platform</p>
+
+  <div class="premium-grid">
+
+    <!-- IMAGE -->
+    <div class="premium-image">
+      <img src="images/btc.jpg" alt="Bitcoin">
+    </div>
+
+    <!-- TEXT -->
+    <div class="premium-card">
+      <h3>Premium Trading Experience</h3>
+
+      <p>
+        One of the primary goals of Ace Exchange is to provide the best product in the market.
+        Our relationships with leading tier one financial institutions mean deep liquidity
+        and tighter spreads for Forex traders.
+      </p>
+
+      <ul>
+        <li>✔ Trade Forex, Indices, Shares & Commodities</li>
+        <li>✔ Access global markets 24 hours / 7 days</li>
+        <li>✔ Multilingual customer support</li>
+        <li>✔ Trade on the go on our mobile apps</li>
+      </ul>
+
+      <a href="#" class="btn">Learn About Our Conditions →</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonial-section">
+
+  <span class="badge">SUCCESS STORIES</span>
+  <h2>Client Testimonials</h2>
+  <p class="subtitle">
+    Hear from our satisfied clients who have achieved impressive results with our platform
+  </p>
+
+  <div class="testimonial-grid">
+
+    <!-- CARD 1 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        Since I started using Ace Exchange, I have been earning like never before.
+        You guys have the best signals.
+      </p>
+
+      <div class="user">
+        <img src="images/testimonal1.jpg" alt="">
+        <div>
+          <strong>Malcom47</strong>
+          <span>Verified Trader</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        I already got more than $200,000 within a month investing with Ace Exchange.
+        Will again invest soon.
+      </p>
+
+      <div class="user">
+        <img src="images/testimonal2.jpg" alt="">
+        <div>
+          <strong>Christy</strong>
+          <span>Elite Investor</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        I was able to earn additional $30,000 to my profit. It’s amazing,
+        you guys are the best, keep it up.
+      </p>
+
+      <div class="user">
+        <img src="images/testimonal3.jpg" alt="">
+        <div>
+          <strong>LindsayB</strong>
+          <span>Professional Trader</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        This was a very easy process and I received my funds quickly as I needed them.
+        Highly recommend Ace Exchange.
+      </p>
+
+      <div class="user">
+        <img src="images/testimonal4.jpg" alt="">
+        <div>
+          <strong>Crisn</strong>
+          <span>Active Trader</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-brand">
+      <div class="logo-row">
+        <img src="images/logo.png" alt="logo">
+        <h2>BitExchange</h2>
+      </div>
+
+      <p>
+        BitExchange offers CFD trading on stocks, forex, indices, commodities, 
+        and cryptocurrencies with competitive spreads and advanced trading tools.
+      </p>
+
+      <div class="socials">
+        <i>🌐</i>
+        <i>💼</i>
+        <i>✉️</i>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <a href="#">About Us</a>
+      <a href="#">Why Choose Us</a>
+      <a href="#">Education</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- TRADING -->
+    <div class="footer-links">
+      <h3>Trading</h3>
+      <a href="#">Cryptocurrencies</a>
+      <a href="#">Forex</a>
+      <a href="#">Shares</a>
+      <a href="#">Indices</a>
+    </div>
+
+    <!-- ACCOUNT -->
+    <div class="footer-links">
+      <h3>Your Account</h3>
+      <a href="login.html">Log In</a>
+      <a href="create-account.html">Create Account</a>
+      <a href="#">Demo Account</a>
+      <a href="#">Help Center</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= CHAT BUTTON ================= -->
 <div class="chat-toggle" onclick="toggleChat()">
   💬
 </div>
 
-<!-- FULLSCREEN CHAT -->
+
+<!-- ================= CHAT OVERLAY ================= -->
 <div class="chat-overlay" id="chatOverlay">
   
   <div class="chat-container">
@@ -141,18 +714,37 @@
 
 </div>
 
-<!-- ✅ TradingView Script (ONLY ONCE) -->
+
+<!-- ================= SCRIPTS ================= -->
+
+<!-- TradingView -->
 <script src="https://s3.tradingview.com/tv.js"></script>
 
 <script>
+new TradingView.widget({
+  container_id: "marketChart",
+  width: "100%",
+  height: 150,
+
+  // ✅ FIXED SYMBOL
+  symbol: "OANDA:SPX500USD",
+
+  interval: "D",
+  theme: "dark",
+  style: "3",
+  hide_top_toolbar: true,
+  hide_legend: true
+});
+
+
 let widget;
 
-// LOAD CHART
+// ================= LOAD CHART =================
 function loadChart(symbol = "BTCUSD") {
   const container = document.getElementById("tradingview_chart");
   if (!container) return;
 
-  container.innerHTML = ""; // clear old chart
+  container.innerHTML = "";
 
   widget = new TradingView.widget({
     width: "100%",
@@ -171,22 +763,20 @@ function loadChart(symbol = "BTCUSD") {
   });
 }
 
-// SWITCH COINS
+// ================= SWITCH COIN =================
 function changeSymbol(symbol, el) {
   document.querySelectorAll(".coin").forEach(c => c.classList.remove("active"));
   el.classList.add("active");
   loadChart(symbol);
 }
 
-// LOAD DEFAULT CHART
+// ================= LOAD DEFAULT =================
 document.addEventListener("DOMContentLoaded", function () {
   loadChart();
 });
 
 
-// =======================
-// 🔥 LIVE PRICES
-// =======================
+// ================= LIVE PRICES =================
 async function getPrices() {
   try {
     const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd");
@@ -208,7 +798,84 @@ async function getPrices() {
 // RUN PRICE FETCH
 getPrices();
 setInterval(getPrices, 10000);
+
+
+// ================= CHAT SYSTEM =================
+function toggleChat() {
+  const overlay = document.getElementById("chatOverlay");
+  overlay.classList.toggle("active");
+}
+
+function sendMessage() {
+  const input = document.getElementById("chatInput");
+  const chatBody = document.getElementById("chatBody");
+
+  if (input.value.trim() === "") return;
+
+  // USER MESSAGE
+  const userMsg = document.createElement("p");
+  userMsg.className = "user";
+  userMsg.innerText = input.value;
+  chatBody.appendChild(userMsg);
+
+  // BOT RESPONSE
+  const botMsg = document.createElement("p");
+  botMsg.className = "bot";
+  botMsg.innerText = "Thanks for your message! We'll reply shortly.";
+  chatBody.appendChild(botMsg);
+
+  input.value = "";
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+
+// ================= MOBILE MENU FIX (VERY IMPORTANT) =================
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+
+async function loadMarket() {
+  try {
+    const res = await fetch("https://api.twelvedata.com/quote?symbol=SPX,NDX,DJI,N225&apikey=demo");
+    const data = await res.json();
+
+    update("spx", data.SPX);
+    update("nsx", data.NDX);
+    update("dji", data.DJI);
+    update("nikkei", data.N225);
+
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+function update(prefix, d) {
+  if (!d) return;
+
+  document.getElementById(prefix + "Price").innerText = d.close;
+
+  const change = parseFloat(d.percent_change).toFixed(2);
+  const el = document.getElementById(prefix + "Change");
+
+  el.innerText = (change > 0 ? "+" : "") + change + "%";
+
+  // 🔥 ADD GLOW CLASS
+  el.classList.remove("positive", "negative");
+
+  if (change >= 0) {
+    el.classList.add("positive");
+  } else {
+    el.classList.add("negative");
+  }
+}
+
+loadMarket();
+setInterval(loadMarket, 15000);
 </script>
-<script src="js/script.js"></script>
+
 </body>
 </html>
